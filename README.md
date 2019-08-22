@@ -5,7 +5,7 @@ This pipeline maps reads to selected genome (by using Bowtie2), identifies enric
 #### Steps:
   1. For Quality Control, we use FastQC to create qc outputs. There are optional read quality filtering (trimmomatic), read quality trimming (trimmomatic), adapter removal (cutadapt) processes available.
   2. In the sequential mapping step, Bowtie2 is used to count or filter out common reads (eg. ercc, rmsk). 
-  3. Bowtie2 is used to align reads to a selected genome, and duplicates removed with Picard or Samtools,
+  3. Bowtie2 is used to align reads to a selected genome, and duplicates removed with Picard.
   4. For ATAC-Seq specifically the pipeline calls accessible chromatin regions by estimating the the Tn5 transposase cut site by first positioning on the 9-th base upstream of the 5’ read end then extending by 29-bases downstream. This extension process has been shown to more accurate reflect the exact position that was accessible to transposase (Donnard et al. 2018; Buenrostro et al. 2013). Once each read has been shortened, Peaks are called using MACS2 (Zhang et al. 2008).
   5. When processing several samples together, the ATAC pipeline provide consensus peak calls by merging all peaks individually called in each samples using Bedtools (Quinlan and Hall 2010). The number of reads in each peak location are then quantified using Bedtools (Quinlan and Hall 2010) coverage function.
   6. Optionally, genome-wide Bam analysis is done by RseQC.
