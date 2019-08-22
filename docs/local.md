@@ -19,8 +19,7 @@ java -version
 # Install Nextflow
 curl -fsSL get.nextflow.io | bash
 
-# Add Nextflow binary to your bin PATH or any accessible path in your environment:
-chmod 755 nextflow
+# Add Nextflow binary to your PATH:
 mv nextflow ~/bin/
 # OR system-wide installation:
 # sudo mv nextflow /usr/local/bin
