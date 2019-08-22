@@ -25,7 +25,7 @@ There are three fields need to be entered: output-prefix, sample-prefix, and inp
     | control       |  control-rep1 |              |
 
 
-Program Versions:
+#### Program Versions:
   - Macs2 v2.1.2
   - Bowtie2 v2.3.5
   - Bowtie v1.2.2
@@ -41,3 +41,11 @@ Program Versions:
   - Fastx_toolkit v0.0.14
   - Ucsc-wigToBigWig v366
   - Pdfbox-App v2.0.0
+
+#### Run through DolphinNext User Interface:
+
+To start using the dolphinnext/chipseq pipeline please go to [*DolphinNext Web page*](https://dolphinnext.umassmed.edu/index.php?np=1&id=485) and click run button.
+
+#### Run through Command Line:
+
+To install and start using the dolphinnext/atacseq pipeline by using command line, please follow these steps: [*Installation*](https://github.com/dolphinnext/atacseq/blob/master/docs/local.md).
