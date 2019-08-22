@@ -8,7 +8,7 @@ This pipeline maps reads to selected genome (by using Bowtie2), identifies enric
   3. Bowtie2 is used to align reads to a selected genome, and duplicates removed with Picard or Samtools,
   4. For ATAC-Seq specifically the pipeline calls accessible chromatin regions by estimating the the Tn5 transposase cut site by first positioning on the 9-th base upstream of the 5’ read end then extending by 29-bases downstream. This extension process has been shown to more accurate reflect the exact position that was accessible to transposase (Donnard et al. 2018; Buenrostro et al. 2013). Once each read has been shortened, Peaks are called using MACS2 (Zhang et al. 2008).
   5. When processing several samples together, the ATAC pipeline provide consensus peak calls by merging all peaks individually called in each samples using Bedtools (Quinlan and Hall 2010). The number of reads in each peak location are then quantified using Bedtools (Quinlan and Hall 2010) coverage function.
-  6. Optionally, genome-wide Bam analysis is done by RseQC, and Picard’s CollectRNASeqMetrics program.
+  6. Optionally, genome-wide Bam analysis is done by RseQC.
   7. Optionally, you can create Integrative Genomics Viewer (IGV)  and Genome Browser Files (TDF and Bigwig, respectively)
   8. As a result, ATAC-Seq pipeline generates a matrix that has the count values for each peak region and samples. This matrix can be uploaded directly to the embedded version of DEBrowser (Kucukural et al. 2019) to perform differential analysis or downloaded to perform other analysis.
 
