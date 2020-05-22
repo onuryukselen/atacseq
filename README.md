@@ -1,4 +1,4 @@
-[![Travis-ci tests:](https://travis-ci.org/dolphinnext/atacseq.svg?branch=master)](https://travis-ci.org/dolphinnext/atacseq) [![DOI:10.1101/689539](https://zenodo.org/badge/DOI/10.1101/689539.svg)](https://doi.org/10.1101/689539)
+[![Travis-ci tests:](https://travis-ci.org/dolphinnext/atacseq.svg?branch=master)](https://travis-ci.org/dolphinnext/atacseq) [![DOI:10.1186/s12864-020-6714-x](https://zenodo.org/badge/DOI/10.1186/s12864-020-6714-x.svg)](https://doi.org/10.1186/s12864-020-6714-x)
 
 This pipeline maps reads to selected genome (by using Bowtie2), identifies enriched regions (by using MACS2) and finally creates mean count table for analysis. 
  
@@ -24,6 +24,10 @@ There are three fields need to be entered: output-prefix, sample-prefix, and inp
     | exper         |   exper-rep1  | control-rep1 |
     | control       |  control-rep1 |              |
 
+#### Citation:
+
+If you use DolphinNext in your research, please cite: 
+Yukselen, O., Turkyilmaz, O., Ozturk, A.R. et al. DolphinNext: a distributed data processing platform for high throughput genomics. BMC Genomics 21, 310 (2020). https://doi.org/10.1186/s12864-020-6714-x
 
 #### Program Versions:
   - Macs2 v2.1.2
