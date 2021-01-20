@@ -14,15 +14,19 @@ This pipeline maps reads to selected genome (by using Bowtie2), identifies enric
 
 #### Inputs:
 
-  - Reads
-  - ATAC-prep section
+  - `Reads`
+  - `ATAC-prep section`: To enable peak calling, please click settings of `run_ATAC_MACS2` and enter your samples by clicking `Add` button in the `Sample Definitions` section as described below:
+	
+	There are three fields need to be entered for each sample: output-prefix, sample-prefix, and input-prefix. 
 
-There are three fields need to be entered: output-prefix, sample-prefix, and input-prefix. Please use sample names to fill this form.For instance, to enter following files control-rep1.fastq.gz, exper-rep1.fastq.gz,  as the following.
+	| Output-Prefix | Sample-Prefix | Input-Prefix (optional) |
+	|---------------|---------------|-------------------------|
+	| exper-rep1    |  exper-rep1   |                         |
+	| control-rep1  |  control-rep1 |                         |
 
-    | output-prefix | sample-prefix | input-prefix |
-    |---------------|---------------|--------------|
-    | exper         |   exper-rep1  | control-rep1 |
-    | control       |  control-rep1 |              |
+	* Output-Prefix: Output prefix of the sample. Final reports will be created by using this sample name. 
+	* Sample-Prefix: Sample name which is entered in the reads section.
+	* Input-Prefix (optional):  If your experiment has background sample (input), you can specify its prefix in this section.
 
 #### Citation:
 
